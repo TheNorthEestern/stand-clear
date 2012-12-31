@@ -1,0 +1,78 @@
+.main-container{
+  text-align: center;
+}
+.main-container .doors{
+  display: inline-block;
+}
+.car-door{
+  height: 110px;
+  width: 50px;
+  margin-top: 20px;
+  margin-left: 0;
+  background-color: gray;
+  float: left;
+  -webkit-transition: margin-left 2s ease;
+  -moz-transition: margin-left 2s ease;
+  -o-transition: margin-left 2s ease;
+  -ms-transition: margin-left 2s ease;
+  transition: margin-left 2s ease;
+}
+.car-door .door-window{
+  height: 56px;
+  width: 40px;
+  position: relative;
+  top: 5px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 10px;
+}
+.car-door.left-door{
+  border-right: 2px solid black;
+}
+.car-door.right-door{
+  border-left: 2px solid black;
+}
+.main-container{
+  width : 960px;
+  margin: 0 auto;
+}
+.door-controller{
+  background-color: #d50020;
+  border: none;
+  padding: 25px;
+  color: white;
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 2em;
+  border-bottom: 5px solid red;
+}
+.door-closure-lamp{
+  background-color: #b23800;
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+}
+.doors-open.right-door{
+  margin-left: 104px;
+}
+@keyframes blink{
+  from {background-color: #b23800;}
+  to{ background-color: #EE4B00; }
+}
+@-webkit-keyframes blink{
+  from {background-color: #b23800;}
+  to{ background-color: #EE4B00; }
+}
+@-moz-keyframes blink{
+  from {background-color: #b23800;}
+  to{ background-color: #EE4B00; }
+}
+@-o-keyframes blink{
+  from {background-color: #b23800;}
+  to{ background-color: #EE4B00; }
+}
+.door-closure-lamp-on{
+  -webkit-animation-name: blink;  
+  -webkit-animation-iteration-count: 2;  
+  -webkit-animation-timing-function: none;
+  -webkit-animation-duration: 1s; 
+}
