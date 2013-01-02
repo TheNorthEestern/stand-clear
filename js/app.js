@@ -3,12 +3,12 @@ StandClear = Ember.Application.create();
 StandClear.doorController = Ember.Controller.create({
    doorsOpen: true,
    toggleDoors:function(e){
-		   if(!this.get('doorsOpen')) {
-		  	this.set('doorsOpen', true); 
-		   }	
-		   else{
-			  this.set('doorsOpen', false)	
-		   }
+     if(!this.get('doorsOpen')) {
+    	this.set('doorsOpen', true); 
+     }	
+ 	 else{
+        this.set('doorsOpen', false)	
+ 	 }
    }
 });
 
