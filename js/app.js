@@ -1,16 +1,14 @@
 StandClear = Ember.Application.create();
 
-StandClear.Doors = Ember.Object.extend({
-    door_state : null,
-    opens: 0,
-    closes: 0
-});
-
 StandClear.doorController = Ember.Controller.create({
    doorsOpen: true,
    toggleDoors:function(e){
-     this.doorsOpen = (this.doorsOpen === false) ? true : false; 
-     console.log(this.doorsOpen);
+		   if(!this.get('doorsOpen')) {
+		  	this.set('doorsOpen', true); 
+		   }	
+		   else{
+			  this.set('doorsOpen', false)	
+		   }
    }
 });
 
