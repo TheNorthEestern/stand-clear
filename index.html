@@ -10,10 +10,16 @@
      {{#view StandClear.DoorView class="left-door"}}<div class="door-window"></div>{{/view}}
      {{#view StandClear.DoorView class="right-door"}}<div class="door-window"></div>{{/view}}
     </div>
-    <div class="door-closure-lamp"></div>
+    {{#view StandClear.DoorClosureLampView}}{{/view}}
+    {{#view StandClear.DoorOpenLampView}}{{/view}}
     {{#view StandClear.DoorStateView}}
       Toggle Doors
     {{/view}}
+    <div class="door-stats">
+    <p>Opens: {{StandClear.doors.opens}}</p>
+    <p>Closes: {{StandClear.doors.closes}}</p>
+    <p>{{StandClear.doors.lastAction}}</p>
+    </div>
   </div>
 </script>
  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>

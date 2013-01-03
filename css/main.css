@@ -1,3 +1,6 @@
+body{
+  font: 62.5% Helvetica, sans-serif;
+}
 .main-container{
   text-align: center;
 }
@@ -45,11 +48,23 @@
   font-size: 2em;
   border-bottom: 5px solid red;
 }
-.door-closure-lamp{
-  background-color: #b23800;
+.door-controller:active{
+  background-color:   #333; 
+}
+.door-stats{
+  font-size: 2.5em;
+}
+.door-lamp{
   height: 50px;
   width: 50px;
   border-radius: 25px;
+  margin-top: 15px;
+}
+.closure-lamp{
+  background-color: #b23800;
+}
+.open-lamp{
+  background-color: #790A0A;
 }
 .doors-open.right-door{
   margin-left: 104px;
@@ -72,7 +87,10 @@
 }
 .door-closure-lamp-on{
   -webkit-animation-name: blink;  
-  -webkit-animation-iteration-count: 2;  
-  -webkit-animation-timing-function: none;
-  -webkit-animation-duration: 1s; 
+  -webkit-animation-iteration-count: 3;  
+  -webkit-animation-timing-function: custom(.1,.1,.1,.1);
+  -webkit-animation-duration: .75s; 
+}
+.door-open-lamp-on{
+  background-color: #E11313;
 }
