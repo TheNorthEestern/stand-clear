@@ -88,7 +88,7 @@ body{
 .door-closure-lamp-on{
   -webkit-animation-name: blink;  
   -webkit-animation-iteration-count: 3;  
-  -webkit-animation-timing-function: custom(.1,.1,.1,.1);
+  -webkit-animation-timing-function: cubic-bezier(0,0,0,0);
   -webkit-animation-duration: .75s; 
 }
 .door-open-lamp-on{
