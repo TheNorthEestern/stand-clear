@@ -19,7 +19,7 @@ StandClear.ApplicationController = Ember.ObjectController.extend({
             this.set('lastAction', 'closed');
             this.incrementProperty('closes');
          }
-  }
+  } 
 });
 
 StandClear.applicationController = StandClear.ApplicationController.create();
