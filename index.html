@@ -4,27 +4,25 @@
 <link rel="stylesheet" type="text/css" href="css/main.css" />
 </head>
 <body>
-<script type="text/x-handlebars">
+<script type="text/x-handlebars" data-template-name="doors">
   <div class="main-container">
     <div class="doors">
-     {{#view StandClear.DoorView class="left-door"}}<div class="door-window"></div>{{/view}}
-     {{#view StandClear.DoorView class="right-door"}}<div class="door-window"></div>{{/view}}
+      <div class="car-door left-door"><div class="door-window"></div></div>
+      <div {{bindAttr class="doorsOpen :car-door :right-door"}}><div class="door-window"></div></div>
     </div>
-    {{#view StandClear.DoorClosureLampView}}{{/view}}
-    {{#view StandClear.DoorOpenLampView}}{{/view}}
-    {{#view StandClear.DoorStateView}}
-      Toggle Doors
-    {{/view}}
+    <div {{bindAttr class="doorsOpen::door-closure-lamp-on :door-lamp :closure-lamp"}}></div>
+    <div {{bindAttr class="doorsOpen:door-open-lamp-on :door-lamp :open-lamp"}}></div>
+    <button class="door-controller" {{action toggleDoors this target="controller"}}>Toggle Doors</button>
     <div class="door-stats">
-    <p>Opens: {{StandClear.doors.opens}}</p>
-    <p>Closes: {{StandClear.doors.closes}}</p>
-    <p>{{StandClear.doors.lastAction}}</p>
+    <p>Opens: {{opens}}</p>
+    <p>Closes: {{closes}}</p>
+    <p>{{lastAction}}</p>
     </div>
   </div>
 </script>
  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.2.min.cript>')</script>
  <script src="js/libs/handlebars-1.0.0.beta.6.js"></script>
- <script src="js/libs/ember-1.0.0-pre.2.min.js"></script>
+ <script src="js/libs/ember-1.0.0-pre.2.js"></script>
  <script src="js/app.js"></script>
 </body>
